@@ -1,56 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
   <rect width="720" height="420" fill="#fbfbf9"/>
   <text x="20.0" y="30.0" font-size="16" fill="#24292f" text-anchor="start" font-weight="600">입력 모양에 따른 재귀 깊이</text>
-  <text x="20.0" y="50.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">n = 4,000 · 삽입·버블은 반복문뿐이라 늘 1이다. 블록 정렬만 입력을 탄다</text>
+  <text x="20.0" y="50.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">n = 4,000 · Shell Sort와 Patience Sort는 반복문 중심이고, Quick Sort는 재귀 깊이가 입력에 따라 달라진다</text>
   <line x1="78.0" y1="358.0" x2="696.0" y2="358.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
   <text x="68.0" y="362.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">0</text>
-  <line x1="78.0" y1="301.2" x2="696.0" y2="301.2" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
-  <text x="68.0" y="305.2" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">5</text>
-  <line x1="78.0" y1="244.4" x2="696.0" y2="244.4" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
-  <text x="68.0" y="248.4" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">10</text>
-  <line x1="78.0" y1="187.6" x2="696.0" y2="187.6" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
-  <text x="68.0" y="191.6" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">15</text>
-  <line x1="78.0" y1="130.8" x2="696.0" y2="130.8" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
-  <text x="68.0" y="134.8" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">20</text>
+  <line x1="78.0" y1="287.0" x2="696.0" y2="287.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="291.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">1K</text>
+  <line x1="78.0" y1="216.0" x2="696.0" y2="216.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="220.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">2K</text>
+  <line x1="78.0" y1="145.0" x2="696.0" y2="145.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="149.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">3K</text>
   <line x1="78.0" y1="74.0" x2="696.0" y2="74.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
-  <text x="68.0" y="78.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">25</text>
+  <text x="68.0" y="78.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">4K</text>
   <line x1="78.0" y1="358.0" x2="696.0" y2="358.0" stroke="#6e7781" stroke-width="1" stroke-dasharray="none"/>
   <text x="20.0" y="60.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">재귀 깊이</text>
-  <rect x="102.6" y="346.6" width="32.1" height="11.4" fill="#0072B2"/>
-  <text x="118.6" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="137.7" y="346.6" width="32.1" height="11.4" fill="#E69F00"/>
-  <text x="153.8" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="172.8" y="176.2" width="32.1" height="181.8" fill="#009E73"/>
-  <text x="188.9" y="171.2" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">16</text>
+  <rect x="102.6" y="356.2" width="32.1" height="1.8" fill="#0072B2"/>
+  <text x="118.6" y="351.2" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">26</text>
+  <rect x="137.7" y="357.9" width="32.1" height="0.8" fill="#E69F00"/>
+  <text x="153.8" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
+  <rect x="172.8" y="357.9" width="32.1" height="0.8" fill="#009E73"/>
+  <text x="188.9" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
   <text x="155.2" y="376.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">무작위</text>
-  <rect x="257.1" y="346.6" width="32.1" height="11.4" fill="#0072B2"/>
-  <text x="273.1" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="292.2" y="346.6" width="32.1" height="11.4" fill="#E69F00"/>
-  <text x="308.2" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="327.3" y="346.6" width="32.1" height="11.4" fill="#009E73"/>
-  <text x="343.4" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
+  <rect x="257.1" y="74.1" width="32.1" height="283.9" fill="#0072B2"/>
+  <text x="273.1" y="69.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">4K</text>
+  <rect x="292.2" y="357.9" width="32.1" height="0.8" fill="#E69F00"/>
+  <text x="308.2" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
+  <rect x="327.3" y="357.9" width="32.1" height="0.8" fill="#009E73"/>
+  <text x="343.4" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
   <text x="309.8" y="376.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">정렬됨</text>
-  <rect x="411.6" y="346.6" width="32.1" height="11.4" fill="#0072B2"/>
-  <text x="427.6" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="446.7" y="346.6" width="32.1" height="11.4" fill="#E69F00"/>
-  <text x="462.8" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="481.8" y="85.4" width="32.1" height="272.6" fill="#009E73"/>
-  <text x="497.9" y="80.4" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">24</text>
+  <rect x="411.6" y="74.1" width="32.1" height="283.9" fill="#0072B2"/>
+  <text x="427.6" y="69.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">4K</text>
+  <rect x="446.7" y="357.9" width="32.1" height="0.8" fill="#E69F00"/>
+  <text x="462.8" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
+  <rect x="481.8" y="357.9" width="32.1" height="0.8" fill="#009E73"/>
+  <text x="497.9" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
   <text x="464.2" y="376.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">역순</text>
-  <rect x="566.1" y="346.6" width="32.1" height="11.4" fill="#0072B2"/>
-  <text x="582.1" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="601.2" y="346.6" width="32.1" height="11.4" fill="#E69F00"/>
-  <text x="617.2" y="341.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
-  <rect x="636.3" y="119.4" width="32.1" height="238.6" fill="#009E73"/>
-  <text x="652.4" y="114.4" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">21</text>
+  <rect x="566.1" y="320.4" width="32.1" height="37.6" fill="#0072B2"/>
+  <text x="582.1" y="315.4" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">530</text>
+  <rect x="601.2" y="357.9" width="32.1" height="0.8" fill="#E69F00"/>
+  <text x="617.2" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
+  <rect x="636.3" y="357.9" width="32.1" height="0.8" fill="#009E73"/>
+  <text x="652.4" y="352.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1</text>
   <text x="618.8" y="376.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">중복많음</text>
   <line x1="78.0" y1="390.0" x2="100.0" y2="390.0" stroke="#0072B2" stroke-width="2.4" stroke-dasharray="none"/>
   <circle cx="89.0" cy="390.0" r="3" fill="#0072B2"/>
-  <text x="106.0" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">insertionSort</text>
-  <line x1="209.8" y1="390.0" x2="231.8" y2="390.0" stroke="#E69F00" stroke-width="2.4" stroke-dasharray="7 4"/>
-  <circle cx="220.8" cy="390.0" r="3" fill="#E69F00"/>
-  <text x="237.8" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">bubbleSort</text>
-  <line x1="321.8" y1="390.0" x2="343.8" y2="390.0" stroke="#009E73" stroke-width="2.4" stroke-dasharray="2 3"/>
-  <circle cx="332.8" cy="390.0" r="3" fill="#009E73"/>
-  <text x="349.8" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">blockSort</text>
+  <text x="106.0" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">quickSort</text>
+  <line x1="183.4" y1="390.0" x2="205.4" y2="390.0" stroke="#E69F00" stroke-width="2.4" stroke-dasharray="7 4"/>
+  <circle cx="194.4" cy="390.0" r="3" fill="#E69F00"/>
+  <text x="211.4" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">shellSort</text>
+  <line x1="288.8" y1="390.0" x2="310.8" y2="390.0" stroke="#009E73" stroke-width="2.4" stroke-dasharray="2 3"/>
+  <circle cx="299.8" cy="390.0" r="3" fill="#009E73"/>
+  <text x="316.8" y="394.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">patienceSort</text>
 </svg>

@@ -14,7 +14,7 @@
 #include "sort.h"
 
 /* 정렬 함수의 인자 다섯 개를 한 덩어리로 들고 다닌다. tmp는 원소 하나를
- * 잠시 담아 두는 자리다. 여기 말고 추가로 잡는 메모리는 없다. */
+ * 잠시 담아 두는 자리다.*/
 typedef struct SortCtx {
     char *base;
     size_t size;

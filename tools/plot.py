@@ -23,7 +23,7 @@ import svgchart  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 BINARY = ROOT / "src" / "main.out"
 OUT_DIR = ROOT / "report"
-ALGOS = ["insertionSort", "bubbleSort", "blockSort"]
+ALGOS = ["quickSort", "shellSort", "patienceSort"]
 KIND_LABEL = {
     "random": "무작위",
     "sorted": "정렬됨",
@@ -124,44 +124,44 @@ def main():
     made.append(svgchart.grouped_bar_chart(
         OUT_DIR / "input-shapes-depth.svg",
         "입력 모양에 따른 재귀 깊이",
-        "n = 4,000 · 삽입·버블은 반복문뿐이라 늘 1이다. 블록 정렬만 입력을 탄다",
+        "n = 4,000 · Shell Sort와 Patience Sort는 반복문 중심이고, Quick Sort는 재귀 깊이가 입력에 따라 달라진다",
         shape_labels, by_algo(kinds, "maxDepth", kind_keys, "input"),
         "재귀 깊이"))
 
-    # 4. 비교는 비슷한데 이동이 다르다 — 버블 정렬이 느린 진짜 이유
+    # 4. 비교 횟수와 이동 횟수 비교
     reversed_rows = pick(kinds, input="reversed")
     made.append(svgchart.grouped_bar_chart(
         OUT_DIR / "compares-vs-moves.svg",
         "비교 횟수는 비슷한데 이동 횟수가 다르다",
-        "n = 4,000 역순 입력 · 교환 한 번이 이동 세 번이라 버블 정렬만 3배로 뛴다",
+        "n = 4,000 역순 입력 · 세 정렬의 비교 횟수와 이동 횟수를 비교한다",
         ["비교", "이동"],
         {algo: [pick(reversed_rows, algo=algo)[0]["compares"],
                 pick(reversed_rows, algo=algo)[0]["moves"]] for algo in ALGOS},
         "횟수"))
 
-    # 5. 블록 크기 실험 — 이 값이 왜 상수인지를 보여 준다
-    blocks = run_csv("--blocks")
-    for row in blocks:
-        for key in ("n", "block", "compares", "moves"):
-            row[key] = int(row[key])
-        row["millis"] = float(row["millis"])
-    with open(OUT_DIR / "block-size.csv", "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(blocks[0]))
-        w.writeheader()
-        w.writerows(blocks)
-    xs = sorted({r["block"] for r in blocks if r["block"] <= 512})
-    series = {}
-    for n in sorted({r["n"] for r in blocks}):
-        series[f"n = {n:,}"] = [
-            next((r["compares"] for r in blocks if r["n"] == n and r["block"] == b), 0)
-            for b in xs
-        ]
-    made.append(svgchart.line_chart(
-        OUT_DIR / "block-size.svg",
-        "블록 크기를 바꿔 가며 — 비교 횟수",
-        "무작위 입력 · 로그-로그 · 최적 블록 크기는 n이 커져도 8~32에서 움직이지 않는다",
-        xs, series, "블록 크기 (원소 수)", "비교 횟수",
-        annotate_slope=False, vline=32, vline_label="지금 쓰는 값 32"))
+    # # 5. 블록 크기 실험 — 이 값이 왜 상수인지를 보여 준다
+    # blocks = run_csv("--blocks")
+    # for row in blocks:
+    #     for key in ("n", "block", "compares", "moves"):
+    #         row[key] = int(row[key])
+    #     row["millis"] = float(row["millis"])
+    # with open(OUT_DIR / "block-size.csv", "w", encoding="utf-8", newline="") as f:
+    #     w = csv.DictWriter(f, fieldnames=list(blocks[0]))
+    #     w.writeheader()
+    #     w.writerows(blocks)
+    # xs = sorted({r["block"] for r in blocks if r["block"] <= 512})
+    # series = {}
+    # for n in sorted({r["n"] for r in blocks}):
+    #     series[f"n = {n:,}"] = [
+    #         next((r["compares"] for r in blocks if r["n"] == n and r["block"] == b), 0)
+    #         for b in xs
+    #     ]
+    # made.append(svgchart.line_chart(
+    #     OUT_DIR / "block-size.svg",
+    #     "블록 크기를 바꿔 가며 — 비교 횟수",
+    #     "무작위 입력 · 로그-로그 · 최적 블록 크기는 n이 커져도 8~32에서 움직이지 않는다",
+    #     xs, series, "블록 크기 (원소 수)", "비교 횟수",
+    #     annotate_slope=False, vline=32, vline_label="지금 쓰는 값 32"))
 
     for path in made:
         print(f"wrote {Path(path).relative_to(ROOT)}")

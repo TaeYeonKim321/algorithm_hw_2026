@@ -28,14 +28,17 @@ typedef struct SortAlgorithm {
     const char *timeComplexity;  /* 평균 시간복잡도 (표에 찍는 설명) */
     const char *spaceComplexity; /* 추가 메모리 */
     int stable;                  /* 안정 정렬이라고 주장하는 값. 테스트가 실측과 맞춰 본다 */
-    /* base[0..n-1]을 제자리에서 오름차순 정렬한다. 원소 하나는 size 바이트다.
+    /* base[0..n-1]을 오름차순 정렬한다. 원소 하나는 size 바이트다.
      * stats가 NULL이면 측정하지 않는다. */
     void (*sort)(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
 } SortAlgorithm;
 
-void insertionSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
-void bubbleSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
-void blockSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+// void insertionSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+// void bubbleSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+// void blockSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+void quickSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+void shellSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
+void patienceSort(void *base, size_t n, size_t size, SortCompare cmp, SortStats *stats);
 
 /* 구현 셋을 담은 표. 호출하는 쪽은 이 표만 훑으면 된다.
  * 정렬을 하나 더 만들면 표에 한 줄 넣는 것으로 끝난다. */

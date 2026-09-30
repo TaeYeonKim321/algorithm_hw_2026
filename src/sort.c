@@ -89,9 +89,12 @@ void sortSwap(SortCtx *c, size_t i, size_t j) {
 /* 정렬을 하나 더 만들면 파일을 하나 더 두고 여기에 한 줄 넣는다.
  * main.c도 테스트도 이 표만 훑으므로 그것으로 끝이다. */
 const SortAlgorithm SORT_ALGORITHMS[] = {
-    {"insertionSort", "O(n^2)", "O(1)", 1, insertionSort},
-    {"bubbleSort",    "O(n^2)", "O(1)", 1, bubbleSort},
-    {"blockSort",     "O(n log^2 n)", "O(1)", 1, blockSort},
+    // {"insertionSort", "O(n^2)",         "O(1)", 1, insertionSort},
+    // {"bubbleSort",    "O(n^2)",         "O(1)", 1, bubbleSort},
+    // {"blockSort",     "O(n log^2 n)",   "O(1)", 1, blockSort},
+    {"quickSort",     "O(n log n)",     "O(1)", 0, quickSort},
+    {"shellSort",     "O(n^2)",         "O(1)", 0, shellSort},
+    {"patienceSort",  "O(n log n)",     "O(n)", 1, patienceSort},
 };
 
 const size_t SORT_ALGORITHM_COUNT = sizeof(SORT_ALGORITHMS) / sizeof(SORT_ALGORITHMS[0]);
