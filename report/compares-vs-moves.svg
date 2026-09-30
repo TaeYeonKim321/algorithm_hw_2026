@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
   <rect width="720" height="420" fill="#fbfbf9"/>
-  <text x="20.0" y="30.0" font-size="16" fill="#24292f" text-anchor="start" font-weight="600">비교 횟수는 비슷한데 이동 횟수가 다르다</text>
+  <text x="20.0" y="30.0" font-size="16" fill="#24292f" text-anchor="start" font-weight="600">알고리즘에 따라 비교 횟수와 이동 횟수에 차이가 나타난다</text>
   <text x="20.0" y="50.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">n = 4,000 역순 입력 · 세 정렬의 비교 횟수와 이동 횟수를 비교한다</text>
   <line x1="78.0" y1="358.0" x2="696.0" y2="358.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
   <text x="68.0" y="362.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">0</text>

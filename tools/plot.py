@@ -132,7 +132,7 @@ def main():
     reversed_rows = pick(kinds, input="reversed")
     made.append(svgchart.grouped_bar_chart(
         OUT_DIR / "compares-vs-moves.svg",
-        "비교 횟수는 비슷한데 이동 횟수가 다르다",
+        "알고리즘에 따라 비교 횟수와 이동 횟수에 차이가 나타난다",
         "n = 4,000 역순 입력 · 세 정렬의 비교 횟수와 이동 횟수를 비교한다",
         ["비교", "이동"],
         {algo: [pick(reversed_rows, algo=algo)[0]["compares"],

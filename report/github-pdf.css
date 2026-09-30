@@ -1,55 +1,177 @@
-@font-face {
-    font-family: "Mona Sans VF";
-    src: local("Mona Sans VF");
-    font-weight: 200 900;
-    font-stretch: 75% 125%;
-    font-style: normal;
-    font-optical-sizing: auto;
+@page {
+    size: A4;
+    margin: 10mm 13mm 10mm 13mm;
 }
 
-html,
-body,
-.markdown-body {
+body {
     font-family:
-        "Mona Sans VF",
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        "Noto Sans Backtick Fix",
-        "Noto Sans CJK KR",
-        "Noto Sans",
-        Helvetica,
+        "Malgun Gothic",
+        "Noto Sans KR",
         Arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji";
-    font-optical-sizing: auto;
+        sans-serif;
+
+    font-size: 9.8px;
+    line-height: 1.4;
+    color: #24292f;
+    max-width: none;
 }
+
+/* 제목 */
+
+h1 {
+    font-size: 21px;
+    line-height: 1.2;
+    margin: 0 0 9px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+h2 {
+    font-size: 17px;
+    line-height: 1.25;
+    margin: 15px 0 6px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #d8dee4;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+h3 {
+    font-size: 13.5px;
+    line-height: 1.3;
+    margin: 11px 0 5px 0;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+/* 본문 */
+
+p {
+    margin: 0 0 5px 0;
+}
+
+ul,
+ol {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding-left: 19px;
+}
+
+li {
+    margin: 1px 0;
+}
+
+/* 인라인 코드 */
+
+code {
+    font-family:
+        "Cascadia Code",
+        "Consolas",
+        "SFMono-Regular",
+        monospace;
+    font-size: 0.9em;
+}
+
+/* 코드 블록 */
+
+pre {
+    margin: 5px 0 6px 0;
+    padding: 7px 9px;
+    border: 1px solid #d0d7de;
+    border-radius: 5px;
+    background: #f6f8fa;
+
+    font-size: 8.6px;
+    line-height: 1.3;
+
+    white-space: pre-wrap;
+    overflow: hidden;
+
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* 표 */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin: 5px 0 7px 0;
+
+    font-size: 8.7px;
+
+    page-break-inside: auto;
+}
+
+th,
+td {
+    border: 1px solid #d0d7de;
+    padding: 3px 4px;
+}
+
+th {
+    background: #f6f8fa;
+    font-weight: 600;
+}
+
+tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* 그래프
+   원래 스샷처럼 본문과 함께 배치되도록 크기를 줄임 */
+
+img[src$=".svg"] {
+    display: block;
+    width: 76%;
+    max-width: 76%;
+    height: auto;
+
+    margin: 4px auto 5px auto;
+}
+
+/* 혹시 SVG가 아닌 이미지가 있을 경우 */
+
+img {
+    max-height: none;
+    page-break-inside: auto;
+}
+
+/* 구분선 */
+
+hr {
+    border: 0;
+    border-top: 1px solid #d8dee4;
+    margin: 11px 0;
+}
+
+/* 링크 */
+
+a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+/* 인용 */
+
+blockquote {
+    margin: 5px 0;
+    padding: 0 9px;
+
+    color: #57606a;
+    border-left: 3px solid #d0d7de;
+}
+
+/* 제목이 페이지 끝에 혼자 남는 것 방지 */
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-td,
-th,
-blockquote {
-    font-family: inherit;
-}
-
-code,
-pre,
-kbd,
-samp {
-    font-family:
-        ui-monospace,
-        SFMono-Regular,
-        "SF Mono",
-        Menlo,
-        Consolas,
-        "Liberation Mono",
-        monospace;
+h3 {
+    page-break-after: avoid;
+    break-after: avoid;
 }

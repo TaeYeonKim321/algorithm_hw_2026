@@ -51,14 +51,14 @@ def si(value):
                 text = text.rstrip("0").rstrip(".")
             return text + suffix
     if value >= 1:
-        return f"{value:.0f}"
+       return f"{value:g}"
     return f"{value:g}"
 
 
 def ms(value):
     """시간(ms) 막대에 붙일 라벨. 0.004와 27.9를 한 축에서 함께 읽혀야 한다."""
     if value >= 10:
-        return f"{value:.0f}"
+       return f"{value:g}"
     if value >= 1:
         return f"{value:.1f}"
     return f"{value:.3f}".rstrip("0").rstrip(".")
